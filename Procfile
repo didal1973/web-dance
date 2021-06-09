@@ -1,1 +1,1 @@
-web: python dance.py
+web: python dance.py runserver 0.0.0.0:5000
