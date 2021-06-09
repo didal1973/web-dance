@@ -1,4 +1,4 @@
-flask
-flask-login
-flask-wtf
+Flask
+Flask-Login
+Flask-WTF
 SQLAlchemy
