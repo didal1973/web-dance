@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "CodePro";
+    src: url(../fonts/CodePro.otf);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s;
+}
+a:active,
+a:hover{
+    color: rgb(255, 159, 32);
+}
+.logotype-img{
+    width: 63.77px;
+    height: 77.33px;
+    margin-top: 33px;
+    margin-left: 65px;
+    border-bottom: 2px solid white;
+    transition: 0.2s;
+}
+.logotype-img:active,
+.logotype-img:hover{
+    border-bottom: 2px solid orange;
+}
+.text-auth-reg{
+    display: inline-flex;
+    text-align: center;
+}
+.header-header{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.block-text-rigth-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otstup-block{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+h1{
+    font-family: "CodePro";
+    text-align: center;
+    font-size: 52px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+h2{
+    font-family: "CodePro";
+    text-align: left;
+    font-size: 42px;
+    margin-top: 50px;
+    color: black;
+    opacity: 0.5;
+}
+h3{
+    font-family: "CodePro";
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+footer{
+    background-color: #C4C4C4;
+    padding: 20px;
+}
+.block-nash-studio{
+    box-shadow: 0px 0px 5px 1px gray;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.block-nash-text-studio{
+    padding: 10px;
+}
+.nash-studio-img{
+    width: 20vw;
+    height: 25vw;
+    padding: 10px;
+}
+
+.form-auth-reg{
+    box-shadow: 0px 0px 5px 1px black;
+    border-radius: 40px;
+    width: 20vw;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-family: "CodePro";
+    transition: 0.3s;
+    outline: none;
+    border: none;
+    background-color: orange;
+}
+button:active,
+button:hover{
+    background-color: rgb(185, 185, 185);
+}
+
+.text-auth-reg1{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: normal;
+    font-family: "CodePro";
+}
+.div-form-auth-reg{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    margin-top: 170px;
+}
+.scroll{
+     
+    margin: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+	height:200px; /* необходим фиксированный размер */
+	overflow:auto; /* прокрутка появляется по необходимости */
+	padding:10px 20px;
+	border:#999 1px solid;
+	background-color:#FAFAFA;
+}
+
+.scroll1{
+     
+    margin: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+	height:200px; /* необходим фиксированный размер */
+	overflow:auto; /* прокрутка появляется по необходимости */
+	padding:10px 20px;
+	border:#999 1px solid;
+	background-color:#FAFAFA;
+}
+

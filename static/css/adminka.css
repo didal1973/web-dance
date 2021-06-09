@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "CodePro";
+    src: url(../fonts/CodePro.otf);
+}
+.a-menu{
+    background-color: #FF5C00;
+    color: white;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.a-menu:active,
+.a-menu:hover{
+    background-color: #C4C4C4;
+    color: black;
+
+}
+.block-menu{
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.a-admin{
+    font-family: "CodePro";
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+}
+.menu-admin{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+.block-adminka{
+    display: flex;
+}
+.h2-admin{
+    text-align: center;
+}
+.admin-info{
+    width: 70vw;
+}
