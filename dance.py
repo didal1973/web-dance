@@ -1,11 +1,12 @@
-# flask framework
+import os
+
 from flask import Flask, render_template, request, make_response, session, redirect, abort
 from flask_login import LoginManager, login_user, login_required, current_user, logout_user
 # models
 from data import db_session
 from data.users import User
 # sqlite
-import sqlite3
+# import sqlite3
 # forms
 from forms.register_form import RegisterForm
 from forms.login_form import LoginForm
@@ -79,7 +80,10 @@ def admin_otzev():
 def main():
     # initilize database
     # db_session.global_init("db/data.db")
-    app.run(port=8080, host='127.0.0.1', debug=True)
+    # app.run(port=8080, host='127.0.0.1', debug=True)
+
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 
 
 if __name__ == '__main__':
