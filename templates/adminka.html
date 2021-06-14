@@ -27,7 +27,6 @@
             <div class="block-adminka">
                 <div class="menu-admin">
                     <a class="a-admin" href="adminka">Заявки</a>
-                    <a class="a-admin" href="admin-otzev">Отзывы</a>
                     <a class="a-admin" href="admin-pisma">Письма от клиентов</a>
                     <a class="a-admin" href="">В следующем обновлении...</a>
                     <a class="a-admin" href="">В следующем обновлении...</a>
@@ -37,8 +36,23 @@
                 <div class="admin-info">
                     <h2 class="h2-admin">Заявки</h2>
                     <div>
-
-                        это div
+                        <div class="block-otziv-top">
+                            <div>
+                                <p class="text-header-otziv">Заявка:</p>
+                            </div>
+                            {% for item in statement %}
+                            <div class="otziv-main">
+                                <p class="text-header-otziv">{{item["firstname"]}}</p>
+                                <p class="text-header-otziv">{{item["lastname"]}}</p>
+                                <p class="text-header-otziv">{{item["email"]}}</p>
+                                <p class="text-header-otziv">{{item["day"]}}</p>
+                                <p class="text-header-otziv">{{item["country"]}}</p>
+                                <p class="text-header-otziv">{{item["level"]}}</p>
+                                <!-- Текст заявки -->
+                            </div>
+                            {% endfor %}
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>

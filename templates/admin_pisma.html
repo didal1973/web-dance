@@ -27,7 +27,6 @@
             <div class="block-adminka">
                 <div class="menu-admin">
                     <a class="a-admin" href="adminka">Заявки</a>
-                    <a class="a-admin" href="admin-otzev">Отзывы</a>
                     <a class="a-admin" href="admin-pisma">Письма от клиентов</a>
                     <a class="a-admin" href="">В следующем обновлении...</a>
                     <a class="a-admin" href="">В следующем обновлении...</a>
@@ -37,8 +36,19 @@
                 <div class="admin-info">
                     <h2 class="h2-admin">Письма от клиентов</h2>
                     <div>
-                        /*ДАЛЬШЕ ТО ЧТО НАДО ВАМ, Я ХЗ*/
-                        это div
+                        <div class="block-otziv-top">
+                            {% for item in mail %}
+                            <div>
+                                <p class="text-header-otziv">E-mail: {{item["email"]}}</p>
+                            </div>
+                            <div class="otziv-main">
+                                {{item["text"]}}
+                                <!-- Текст сообщения -->
+                            </div>
+                            <br>
+                            {% endfor %}
+                        </div>
+                        
                     </div>
                 </div>
             </div>

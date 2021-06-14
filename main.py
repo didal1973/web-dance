@@ -92,6 +92,7 @@ def zayavka():
         db_sess.close()
         return render_template("zayavka.html")
 
+
 @app.route("/comment", methods=['POST', 'GET'])
 def comment():
     if request.method == 'GET':
@@ -148,12 +149,28 @@ def reg():
 
 @app.route("/adminka")
 def adminka():
-    return render_template("adminka.html")
+    statement_list = []
+    db_sess = db_session.create_session()
+    for item in db_sess.query(Statement).all():
+        statement_list.append({"firstname": item.name,
+                               "lastname": item.lastname,
+                               "email": item.email,
+                               "day": item.day,
+                               "country": item.country,
+                               "level": item.level})
+    db_sess.close()
+    return render_template("adminka.html", statement=statement_list)
 
 
 @app.route("/admin-pisma")
 def admin_pisma():
-    return render_template("admin-pisma.html")
+    mail_list = []
+    db_sess = db_session.create_session()
+    for item in db_sess.query(Mail).all():
+        mail_list.append({"email": item.email,
+                          "text": item.text})
+    db_sess.close()
+    return render_template("admin_pisma.html", mail=mail_list)
 
 
 @app.route("/admin-otzev")
