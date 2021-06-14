@@ -24,7 +24,7 @@
     <main>
         <h1> НАПИСАТЬ АДМИНИСТРАТОРУ</h1>
         <div class="postform">
-            <form method="post" action="" class="form">
+            <form method="post" class="form">
                 <div>
 
                     <label for="email"><span class="formTextRed">*</span> E-mail:</label>
@@ -33,12 +33,10 @@
 
                     <div>
                     <label for="comment"><span class="formTextRed">*</span>НАПИСАТЬ:</label>
-                    <TEXTAREA name="comment" cols=100 rows=10 wrap="physical" maxlength=420> </TEXTAREA>
+                    <TEXTAREA id="comment" name="comment" cols=100 rows=10 wrap="physical" maxlength=420> </TEXTAREA>
                     </div>
 
-                    <div class="submit">
-                    <input type="submit" value="Отправить" />
-                    </div>
+                    <button type="submit">Отправить</button>
 
             </form>
         </div>

@@ -24,7 +24,7 @@
     <main>
         <h1>ЗАЯВКА</h1>
         <div class="postform">
-            <form method="post" action="" class="form">
+            <form method="post" class="form">
                 <div>
                     <label for="lastname"><span class="formTextRed">*</span> Фамилия:</label>
                     <input type="text" name="lastname" id="lastname" />
@@ -39,57 +39,40 @@
                     </div>
 
                     <div>
-                    <label for="country"><span class="formTextRed">*</span>Какой абонемент вам подходит:</label>
-                      <select id="country" name="country" class="col-75">
-                        <option value="1">NEWBIE </option>
-                        <option value="2">BASIC </option>
-                        <option value="3">BRONZE </option>
-                        <option value="4">SILVER </option>
-                        <option value="4">GOLD </option>
+                    <label for="level"><span class="formTextRed">*</span>Какой абонемент вам подходит:</label>
+                      <select id="level" name="level" class="col-75">
+                        <option>NEWBIE</option>
+                        <option>BASIC</option>
+                        <option>BRONZE</option>
+                        <option>SILVER</option>
+                        <option>GOLD</option>
                       </select>
                     </div>
                     <div>
-                    <label for="country"><span class="formTextRed">*</span>Сколько раз в неделю готовы заниматься:</label>
-                      <select id="country" name="country" class="col-75">
-                        <option value="1"> (1-2 раза в неделю)</option>
-                        <option value="2"> (2-3 раза в неделю)</option>
-                        <option value="3"> (3-4 раза в неделю)</option>
-                        
+                    <label for="day"><span class="formTextRed">*</span>Сколько раз в неделю готовы заниматься:</label>
+                      <select id="day" name="day" class="col-75">
+                        <option> (1-2 раза в неделю)</option>
+                        <option> (2-3 раза в неделю)</option>
+                        <option> (3-4 раза в неделю)</option>
                       </select>
                     </div>
                     <div>
                         <label for="country"><span class="formTextRed">*</span> Какие направления вас интересуют: </label>
                         <br>
-                        <label class="container">VOGUE
-                            <input type="checkbox" >
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">ХИП-ХОП
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">ПОППИНГ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">DANCEHALL
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">КОНТЕМПОРАРИ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
+                       <select id="country" name="country" class="col-75">
+                        <option>VOGUE</option>
+                        <option>ХИП-ХОП</option>
+                        <option>ПОППИНГ</option>
+                        <option>DANCEHALL</option>
+                        <option>КОНТЕМПОРАРИ</option>
+                      </select>
                     </div>
-
 
                     <div>
                     <label for="comment"><span class="formTextRed">*</span>Комментарий к заявке:</label>
-                    <TEXTAREA name="comment" cols=100 rows=10 wrap="physical" maxlength=420> </TEXTAREA>
+                    <TEXTAREA id="comment" name="comment" cols=100 rows=10 wrap="physical" maxlength=420> </TEXTAREA>
                     </div>
-                    <div class="submit">
-                    <input type="submit" value="Отправить" />
-                    </div>
+                    <button type="submit">Отправить</button>
 
             </form>
         </div>

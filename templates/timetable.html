@@ -3,8 +3,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../static/css/main.css">
         <link rel="stylesheet" href="../static/css/index.css">
-        <link rel="stylesheet" href="../static/css/timetable.css">
-        <title>DANCE NOW | МОЕ РАСПИСАНИЕ</title>
+        <link rel="stylesheet" href="../static/css/zayavka.css">
+        <title>DANCE NOW | РАСПИСАНИЕ</title>
     </head>
     <header>
             <div class="header-header">
@@ -15,176 +15,45 @@
                     <div class="otstup-block">
                         <p>т. 8(956)829-54-13</p>
                     </div>
-                    <div class="text-auth-reg otstup-block">
-                        <a href="index">Выход</a>
-                    </div>
                 </div>
             </div>
     </header>
     <main>
-        <h1>РАСПИСАНИЕ</h1>
-        <div>
-            
-<table>
-    <tr>
-      <th>НАПРАВЛЕНИЕ</th>
-      <th>ДЕНЬ НЕДЕЛИ</th>
-      <th>ВРЕМЯ</th>
-      <th>АУДИТОРИЯ</th>
-      <th>ПЕДАГОК</th>
-    </tr>
-    <tr>
-      <td>КОНТЕМПОРАРИ</td>
-      <td>ПН
-          СР
-          ПТ
-      </td>
-      <td>10:30 - 12:00
-          <br>
-          15:30 - 17:00
-          <br>
-          17:30 - 19:00
-      </td>
-      <td>101
-      <br>
-      102
-      <br>
-      101
-      </td>
-      <td>
-      Иванов П.С
-      <br>
-      Полков Н.В
-      <br>
-      Иванов П.С
-      </td>
-    </tr>
-    <tr>
-      <td>DANCEHALL</td>
-      <td>
-          ВТ
-          ЧТ
-          СБ
-      </td>
-      <td>
-          8:30 - 10:00
-          <br>
-          13:30 - 15:00
-          <br>
-          17:30 - 19:00
-      </td>
-      <td>
-      102
-      <br>
-      101
-      <br>
-      102
-      </td>
-      <td>
-       Иванов П.С
-      <br>
-      Полков Н.В
-      <br>
-      Полков Н.В
-      </td>
-      </td>
-    </tr>
-    <tr>
-      <td>ПОППИНГ</td>
-      <td>
-          ВТ
-          ЧТ
-          ВС
-      </td>
-      <td>
-          10:30 - 12:00
-          <br>
-          15:30 - 17:00
-          <br>
-          17:30 - 19:00
-      </td>
-      <td>
-      103
-      <br>
-      104
-      <br>
-      103
-      </td>
-      <td>
-      Семенов А.С
-      <br>
-      Калимов Ю.В
-      <br>
-       Лобанов Н.В
-      </td>
-      </td>
-    </tr>
-    <tr>
-      <td>ХИП-ХОП</td>
-      <td>
-          ВТ
-          ЧТ
-          СБ
-      </td>
-      <td>8:30 - 10:00
-          <br>
-          13:30 - 15:00
-          <br>
-          17:30 - 19:00
-      </td>
-      <td>
-      103
-      <br>
-      104
-      <br>
-      103
-      </td>
-      <td>
-      Семенов А.С
-      <br>
-      Калимов Ю.В
-      <br>
-      Калимов Ю.В
-      </td>
-    </tr>
-    <tr>
-      <td>VOGUE</td>
-      <td>
-          ПН
-          СР
-          ПТ
-      </td>
-      <td>
-          10:30 - 12:00
-          <br>
-          15:30 - 17:00
-          <br>
-          17:30 - 19:00
-      </td>
-      <td>
-      103
-      <br>
-      104
-      <br>
-      103
-      </td>
-      <td>
-      Семенов А.С
-      <br>
-      Калимов Ю.В
-      <br>
-      Лобанов Н.В
-      </td>
-    </tr>
-   
-  </table>
-  
-    </div>
+      <h1 id="РАСПИСАНИЕ">РАСПИСАНИЕ</h1>
+      <div class="block-table-rasp">
+          <table class="table-box">
+              <tr class="main-line-table">
+                  <th class="main-line-block-table">ДЕНЬ НЕДЕЛИ</th>
+                  <th class="main-line-block-table">ВРЕМЯ</th>
+                  {% for item in classes %}
+                  <th class="main-line-block-table">{{item}}</th>
+                  {% endfor %}
+              </tr>
+              {% for day in days %}
+              <tr>
+              {% set a = 1 %}
+                {% for item in time %}
+                    <tr>
+                    {% if a != 0 %}
+                    <td class="element-table">{{day}}</td>
+                    {% endif %} {% set a = 0 %}
+                    <td class="element-table">{{item}}</td>
+                    {% for class in classes %}
+                    <td class="element-table">{{timetable[day][item][class]}}</td>
+                    {% endfor %}
+
+                </tr>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+             
+            </table>
+      </div>
     </main>
     <footer>
-        <p class="text-footer">Тел.: 8(956)829-54-13</p>
-            <p class="text-footer">E-mail: dance.now@mail.ru</p>
-            <p class="text-footer">Адрес: г. Ижевск, ул. П. П. Берша 20</p>
-            <p class="text-footer">VK: vk.com/dance_now</p>
+      <p class="text-footer">Тел.: 8(956)829-54-13</p>
+      <p class="text-footer">E-mail: dance.now@mail.ru</p>
+      <p class="text-footer">Адрес: г. Ижевск, ул. П. П. Берша 20</p>
+      <p class="text-footer">VK: vk.com/dance_now</p>
     </footer>
 </html>
