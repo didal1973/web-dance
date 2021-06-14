@@ -139,7 +139,7 @@ button:hover{
     margin-top: 170px;
 }
 .scroll{
-     
+    flex-direction: column;
     margin: 30px;
     border-radius: 10px;
     display: flex;
@@ -198,7 +198,7 @@ button:hover{
     background-color: black;
 }
 .block-form{
-    display: flex;
+
     justify-content: center;
 }
 textarea{
@@ -207,6 +207,7 @@ textarea{
     width: 100%;
 }
 .block-p-otziv{
+
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -214,5 +215,26 @@ textarea{
     width: 100%;
 }
 .form-otziv{
-    width: 60vw;
+   padding-left: 500px;
+    width: 30vw;
+
+}
+.block-otziv-top{
+    
+    box-shadow: 0px 0px 5px 1px black;
+    margin: 50px;
+}
+.text-header-otziv{
+    font-size: 16px;
+}
+.otziv-header{
+    border-bottom: 1px solid grey;
+    background-color: rgb(255, 150, 29);
+    padding: 10px;
+}
+.otziv-main{
+
+    padding: 10px;
+    font-family: 'CodePro';
+    font-size: 14px;
 }
